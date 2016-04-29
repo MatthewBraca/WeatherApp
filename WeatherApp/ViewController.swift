@@ -7,19 +7,52 @@
 //
 
 import UIKit
+import Alamofire
+import SnapKit
 
 class ViewController: UIViewController {
-
+    
+    var weather: Weather!
+    
+    @IBOutlet weak var cityNameLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+//        setConstraintsForBackground()
+        
+        weather = Weather()
+        
+        weather.didCompleteDownload { 
+            print("Did we get here")
+            self.configureUI()
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+//    func setConstraintsForBackground() {
+//        let box = UIImageView()
+//        box.image = UIImage(named: "bg")
+//        box.contentMode = UIViewContentMode.ScaleToFill
+//        self.view.addSubview(box)
+//        
+//        box.snp_makeConstraints { (make) in
+//            make.edges.equalTo(self.view)
+//        }
+//        
+////        let labelView = UILabel()
+////        labelView.text = weather.cityName
+////        self.view.addSubview(labelView)
+////        
+////        labelView.snp_makeConstraints { (make) in
+////            make.height.width.equalTo(50)
+////            make.center
+////        }
+//    }
+    
+    func configureUI() {
+        cityNameLbl.text = weather.cityName
     }
-
-
 }
 
