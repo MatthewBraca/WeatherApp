@@ -12,7 +12,13 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    var weather: Weather!
+    @IBOutlet weak var windmphLbl: UILabel!
+    @IBOutlet weak var humidityLbl: UILabel!
+    @IBOutlet weak var currentTemperature: UILabel!
+    @IBOutlet weak var weatherDescription: UILabel!
+    @IBOutlet weak var bgImageView: UIImageView!
+  
+    let weather = Weather()
     
     @IBOutlet weak var cityNameLbl: UILabel!
     
@@ -22,7 +28,7 @@ class ViewController: UIViewController {
         
 //        setConstraintsForBackground()
         
-        weather = Weather()
+        bgImageView.image = UIImage(named: "chicagobg")
         
         weather.didCompleteDownload { 
             print("Did we get here")
@@ -31,28 +37,12 @@ class ViewController: UIViewController {
         
     }
     
-//    func setConstraintsForBackground() {
-//        let box = UIImageView()
-//        box.image = UIImage(named: "bg")
-//        box.contentMode = UIViewContentMode.ScaleToFill
-//        self.view.addSubview(box)
-//        
-//        box.snp_makeConstraints { (make) in
-//            make.edges.equalTo(self.view)
-//        }
-//        
-////        let labelView = UILabel()
-////        labelView.text = weather.cityName
-////        self.view.addSubview(labelView)
-////        
-////        labelView.snp_makeConstraints { (make) in
-////            make.height.width.equalTo(50)
-////            make.center
-////        }
-//    }
-    
     func configureUI() {
         cityNameLbl.text = weather.cityName
+        weatherDescription.text = weather.weatherDescription.capitalizedString
+        currentTemperature.text = "Current Temperatue: \(weather.currentTemp)\u{00B0}"
+        humidityLbl.text = "Humidty: \(weather.humidity)"
+        windmphLbl.text = "Wind Speed: \(weather.windSpeed)"
     }
 }
 

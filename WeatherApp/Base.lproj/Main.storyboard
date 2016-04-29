@@ -17,32 +17,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicagobg" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-W9-bTo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-W9-bTo">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH1-Mk-Gkq">
-                                <rect key="frame" x="78" y="74" width="189" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-Bi-um3">
+                                <rect key="frame" x="150" y="142" width="301" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="OUg-hX-yuP"/>
-                                    <constraint firstAttribute="width" constant="189" id="UaZ-Pi-svh"/>
+                                    <constraint firstAttribute="height" constant="45" id="OMF-V4-nXh"/>
+                                    <constraint firstAttribute="width" constant="301" id="bb1-jK-05D"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temperature: 150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fol-aF-TiX">
+                                <rect key="frame" x="125" y="195" width="350" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="8pD-1q-uht"/>
+                                    <constraint firstAttribute="height" constant="34" id="uGm-bZ-TVC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed: 110mph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-9q-eiX">
+                                <rect key="frame" x="145" y="279" width="311" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="cAk-vP-7AW"/>
+                                    <constraint firstAttribute="width" constant="311" id="pB1-61-IQX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity: 98%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfi-RG-1ry">
+                                <rect key="frame" x="183" y="237" width="235" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="0ei-Yn-dN3"/>
+                                    <constraint firstAttribute="height" constant="34" id="g8W-NJ-BY6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH1-Mk-Gkq">
+                                <rect key="frame" x="188" y="75" width="225" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="319-e6-Rfu"/>
+                                    <constraint firstAttribute="width" constant="225" id="UO6-hu-uJR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9L-9a-JZy">
+                                <rect key="frame" x="152" y="132" width="297" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="eVh-xa-ei1"/>
+                                    <constraint firstAttribute="height" constant="2" id="lDW-NC-1on"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L1V-W9-bTo" secondAttribute="bottom" id="OIz-AK-8tr"/>
-                            <constraint firstAttribute="trailing" secondItem="L1V-W9-bTo" secondAttribute="trailing" id="TmA-gA-Me7"/>
-                            <constraint firstItem="L1V-W9-bTo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bv2-1i-HlM"/>
-                            <constraint firstItem="L1V-W9-bTo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eyQ-L2-acQ"/>
-                            <constraint firstItem="kH1-Mk-Gkq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="m9F-NS-bCi"/>
-                            <constraint firstItem="kH1-Mk-Gkq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="78" id="urg-HL-OI6"/>
+                            <constraint firstItem="P9L-9a-JZy" firstAttribute="top" secondItem="kH1-Mk-Gkq" secondAttribute="bottom" constant="8" id="0kU-fg-tCE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L1V-W9-bTo" secondAttribute="bottom" id="2ev-BP-YAD"/>
+                            <constraint firstItem="WF0-9q-eiX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5kg-bc-qRS"/>
+                            <constraint firstItem="fol-aF-TiX" firstAttribute="top" secondItem="cLA-Bi-um3" secondAttribute="bottom" constant="8" id="7Y1-km-D1a"/>
+                            <constraint firstItem="L1V-W9-bTo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FMX-mD-SeP"/>
+                            <constraint firstItem="fol-aF-TiX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Idq-GJ-LTy"/>
+                            <constraint firstAttribute="trailing" secondItem="L1V-W9-bTo" secondAttribute="trailing" id="KMi-sI-Cfv"/>
+                            <constraint firstItem="kH1-Mk-Gkq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OQt-vV-QJ8"/>
+                            <constraint firstItem="WF0-9q-eiX" firstAttribute="top" secondItem="Xfi-RG-1ry" secondAttribute="bottom" constant="8" id="gQ8-UG-I2P"/>
+                            <constraint firstItem="P9L-9a-JZy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSm-aF-Xj4"/>
+                            <constraint firstItem="cLA-Bi-um3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZ8-tm-Vod"/>
+                            <constraint firstItem="Xfi-RG-1ry" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pBe-y0-HdO"/>
+                            <constraint firstItem="kH1-Mk-Gkq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="pkR-n9-T9R"/>
+                            <constraint firstItem="L1V-W9-bTo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tFi-KC-Jbg"/>
+                            <constraint firstItem="Xfi-RG-1ry" firstAttribute="top" secondItem="fol-aF-TiX" secondAttribute="bottom" constant="8" id="zT5-cO-rLP"/>
+                            <constraint firstItem="cLA-Bi-um3" firstAttribute="top" secondItem="kH1-Mk-Gkq" secondAttribute="bottom" constant="18" id="zr1-3l-OJp"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgImageView" destination="L1V-W9-bTo" id="yZR-pa-DIk"/>
                         <outlet property="cityNameLbl" destination="kH1-Mk-Gkq" id="Fhl-Ny-Cc1"/>
+                        <outlet property="currentTemperature" destination="fol-aF-TiX" id="yUR-EP-sGJ"/>
+                        <outlet property="humidityLbl" destination="Xfi-RG-1ry" id="cXJ-UD-X7z"/>
+                        <outlet property="weatherDescription" destination="cLA-Bi-um3" id="iL7-N7-691"/>
+                        <outlet property="windmphLbl" destination="WF0-9q-eiX" id="jyT-hZ-39u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -50,7 +113,4 @@
             <point key="canvasLocation" x="389" y="339"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="chicagobg" width="7145" height="4755"/>
-    </resources>
 </document>
